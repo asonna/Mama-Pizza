@@ -16,84 +16,87 @@
       <form id="pizzaOrder">
         <h2>Pizza Order Form</h2><br>
         <div class="row" id="size">
+        <p><em>All pizzas included cheese and margaritha sauce. You can select additional toppings for additional charges as outlined next to each item.</em></p>
           <div class="col-sm-6">
-            <label>Please select your pizza size:</label>
+            <label><h3>Please select your pizza size:</h3></label>
              <div class="radio">
                <label>
-                 <input type="radio" name="size" value="xlarge">
-                 Extra Large
+                 <input type="radio" name="size" value="9">
+                 Extra Large ($9)
                </label>
              </div>
              <div class="radio">
                <label>
-                 <input type="radio" name="size" value="large">
-                 Large
+                 <input type="radio" name="size" value="7">
+                 Large ($7)
                </label>
              </div>
              <div class="radio">
                <label>
-                 <input type="radio" name="size" value="medium">
-                 Medium
+                 <input type="radio" name="size" value="5">
+                 Medium ($5)
                </label>
              </div>
              <div class="radio">
                <label>
-                 <input type="radio" name="size" value="small">
-                 Small
+                 <input type="radio" name="size" value="6">
+                 Small ($3)
                </label>
              </div>
            </div>
            <div class="col-sm-6">
-             <label>Is this a rush order or not?</label>
+             <label><h3>Please select the delivery type:</h3></label>
               <div class="radio">
                 <label>
-                  <input type="radio" name="rush" value="yes" class="rushed">
-                  10 am
+                  <input type="radio" name="rush" value="5" class="rushed">
+                  Delivery (+5)
                 </label>
               </div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="rush" value="no" class="norush">
-                  2 pm
+                  <input type="radio" name="rush" value="0" class="norush">
+                  Pickup (free)
                 </label>
               </div>
             </div>
          </div><br>
         <div class="row" id="toppings">
            <div class="col-sm-6" id="meats">
-             <label>Please select your meat toppings below</label><br><br>
+             <label><h3>Please select your meat toppings below</h3></label><br><br>
                <div class="multiselect">
-                  <label><input type="checkbox" name="option[]" value="1" />  Bacon</label><br>
-                  <label><input type="checkbox" name="option[]" value="2" />  Chicken Wings</label><br>
-                  <label><input type="checkbox" name="option[]" value="3" />  Ham</label><br>
-                  <label><input type="checkbox" name="option[]" value="4" />  Sausage</label><br>
-                  <label><input type="checkbox" name="option[]" value="5" />  Pepperoni</label><br>
-                  <label><input type="checkbox" name="option[]" value="6" />  Chicken</label><br>
-                  <label><input type="checkbox" name="option[]" value="7" />  Ground Beef </label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Bacon (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Chicken Wings (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Ham (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Sausage (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Pepperoni (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Chicken (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Ground Beef (+ $2)</label><br>
+                  <label><input type="checkbox" name="meat" value="3" />  Steak (+ $3)</label><br>
+                  <label><input type="checkbox" name="meat" value="3" />  Shrimp (+ $3)</label><br>
                 </div>
            </div><br>
            <div class="col-sm-6" id="veggies">
-             <label>Please select your veggies toppings below</label><br><br>
+             <label><h3>Please select your veggie toppings below</h3></label><br><br>
                <div class="multiselect">
-                  <label><input type="checkbox" name="option[]" value="1" />  Pineapple</label><br>
-                  <label><input type="checkbox" name="option[]" value="2" />  Jalapenos</label><br>
-                  <label><input type="checkbox" name="option[]" value="3" />  Oignon</label><br>
-                  <label><input type="checkbox" name="option[]" value="4" />  Green Pepper</label><br>
-                  <label><input type="checkbox" name="option[]" value="5" />  Spinach</label><br>
-                  <label><input type="checkbox" name="option[]" value="6" />  Mushroom</label><br>
-                  <label><input type="checkbox" name="option[]" value="7" />  Olives</label><br>
-                  <label><input type="checkbox" name="option[]" value="5" />  Banana pepper</label><br>
-                  <label><input type="checkbox" name="option[]" value="6" />  Mushroom</label><br>
-                  <label><input type="checkbox" name="option[]" value="7" />  Olives</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Pineapple (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Jalapenos (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Oignon (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Green Pepper (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Spinach (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Mushroom (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Olives (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Banana pepper (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Mushroom (+ $1)</label><br>
+                  <label><input type="checkbox" name="veggie" value="1" />  Olives (+ $1)</label><br>
                 </div>
            </div><br>
 
-        <button type="submit" class="btn-primary">Place your order</button>
-
+        <button type="submit" class="btn-primary">Add item to cart</button>
+        <!-- <button type="submit" class="btn-success">Review cart</button> -->
       </form>
 
       <div class="receipt">
-        <h2>Pizza Order Receipt</h2><br>
+        <h2>Pizza Order Summary</h2><br>
         <div id="output">
           <ul>
 

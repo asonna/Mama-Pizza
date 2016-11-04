@@ -4,9 +4,14 @@ body {
   font-size: 20PX;
 }
 
-H2 {
+h3 {
+  color: maroon;
+}
+
+h2 {
   font-size: 50px;
 }
+
 .jumbotron {
   background-color: yellow;
   color: black;
