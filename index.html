@@ -13,53 +13,54 @@
       <h1>MAMA'S PIZZA</h1>
     </div>
     <div class="container">
+
       <form id="pizzaOrder">
         <h2>Pizza Order Form</h2><br>
         <div class="row" id="size">
-        <p><em>All pizzas included cheese and margaritha sauce. You can select additional toppings for additional charges as outlined next to each item.</em></p>
-          <div class="col-sm-6">
-            <label><h3>Please select your pizza size:</h3></label>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="9">
-                 Extra Large ($9)
-               </label>
-             </div>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="7">
-                 Large ($7)
-               </label>
-             </div>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="5">
-                 Medium ($5)
-               </label>
-             </div>
-             <div class="radio">
-               <label>
-                 <input type="radio" name="size" value="6">
-                 Small ($3)
-               </label>
-             </div>
-           </div>
-           <div class="col-sm-6">
-             <label><h3>Please select the delivery type:</h3></label>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="rush" value="5" class="rushed">
-                  Delivery (+5)
-                </label>
-              </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="rush" value="0" class="norush">
-                  Pickup (free)
-                </label>
-              </div>
+          <p><em>All pizzas included cheese and margaritha sauce. You can select additional toppings for additional charges as outlined next to each item.</em></p>
+            <div class="col-sm-6">
+              <label><h3>Please select your pizza size:</h3></label>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="9">
+                   Extra Large ($9)
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="7">
+                   Large ($7)
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="5">
+                   Medium ($5)
+                 </label>
+               </div>
+               <div class="radio">
+                 <label>
+                   <input type="radio" name="size" value="6">
+                   Small ($3)
+                 </label>
+               </div>
             </div>
-         </div><br>
+            <div class="col-sm-6">
+               <label><h3>Please select the delivery type:</h3></label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="rush" value="5" class="rushed">
+                    Delivery (+5)
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="rush" value="0" class="norush">
+                    Pickup (free)
+                  </label>
+                </div>
+            </div><br>
+        </div>
         <div class="row" id="toppings">
            <div class="col-sm-6" id="meats">
              <label><h3>Please select your meat toppings below</h3></label><br><br>
@@ -71,10 +72,11 @@
                   <label><input type="checkbox" name="meat" value="2" />  Pepperoni (+ $2)</label><br>
                   <label><input type="checkbox" name="meat" value="2" />  Chicken (+ $2)</label><br>
                   <label><input type="checkbox" name="meat" value="2" />  Ground Beef (+ $2)</label><br>
-                  <label><input type="checkbox" name="meat" value="3" />  Steak (+ $3)</label><br>
-                  <label><input type="checkbox" name="meat" value="3" />  Shrimp (+ $3)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Steak (+ $3)</label><br>
+                  <label><input type="checkbox" name="meat" value="2" />  Shrimp (+ $3)</label><br>
                 </div>
            </div><br>
+
            <div class="col-sm-6" id="veggies">
              <label><h3>Please select your veggie toppings below</h3></label><br><br>
                <div class="multiselect">
@@ -90,12 +92,11 @@
                   <label><input type="checkbox" name="veggie" value="1" />  Olives (+ $1)</label><br>
                 </div>
            </div><br>
-
-        <button type="submit" class="btn-primary">Add item to cart</button>
-        <!-- <button type="submit" class="btn-success">Review cart</button> -->
+         </div>
+          <button type="submit" class="btn-primary">Add item to cart</button>
+          <button type="submit" class="btn-success">Review cart</button>
       </form>
-
-      <div class="receipt">
+      <div class="row" id="orderSum">
         <h2>Pizza Order Summary</h2><br>
         <div id="output">
           <ul>
@@ -103,7 +104,6 @@
           </ul>
         </div>
       </div>
-
     </div>
   </body>
 </html>

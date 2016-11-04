@@ -35,15 +35,23 @@ $(document).ready(function() {
   $(".btn-primary").click(function(event) {
     event.preventDefault();
 debugger;
-    var checkedToppings = [];
     var checkedSize = $('input:radio[name=size]:checked').val();
+    var checkedMeatToppings = [];
+    var checkedVeggieToppings = [];
 
     $.each($("input[name='meat']:checked"), function(){
-      checkedToppings.push($(this).val());
-      return checkedToppings;
+      checkedMeatToppings.push($(this).val());
+      return checkedMeatToppings;
     });
-    alert("My selected toppings are: " + checkedToppings.join(","));
-    $("#output ul").text(checkedToppings);
+
+    $.each($("input[name='veggie']:checked"), function(){
+      checkedVeggieToppings.push($(this).val());
+      return checkedVeggieToppings;
+    });
+
+    $("#orderSum").show();
+    $("#pizzaOrder").hide();
+    $("#output ul").append("<li>" + checkedMeatToppings + "</li>" + "<li>" + checkedVeggieToppings + "</li>");
 
     // var checkedDelivery =
     // var checkedToppings =
