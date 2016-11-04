@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  color: white;
+  font-size: 20PX;
+}
+
+H2 {
+  font-size: 50px;
+}
+.jumbotron {
+  background-color: yellow;
+  color: black;
+  text-align: center;
+}

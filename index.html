@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>MAMA PIZZA</title>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <h1>MAMA'S PIZZA</h1>
+    </div>
+    <div class="container">
+      <form id="pizzaOrder">
+        <h2>Pizza Order Form</h2><br>
+        <div class="row" id="size">
+          <div class="col-sm-6">
+            <label>Please select your pizza size:</label>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="size" value="xlarge">
+                 Extra Large
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="size" value="large">
+                 Large
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="size" value="medium">
+                 Medium
+               </label>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="size" value="small">
+                 Small
+               </label>
+             </div>
+           </div>
+           <div class="col-sm-6">
+             <label>Is this a rush order or not?</label>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="rush" value="yes" class="rushed">
+                  10 am
+                </label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="rush" value="no" class="norush">
+                  2 pm
+                </label>
+              </div>
+            </div>
+         </div><br>
+        <div class="row" id="toppings">
+           <div class="col-sm-6" id="meats">
+             <label>Please select your meat toppings below</label><br><br>
+               <div class="multiselect">
+                  <label><input type="checkbox" name="option[]" value="1" />  Bacon</label><br>
+                  <label><input type="checkbox" name="option[]" value="2" />  Chicken Wings</label><br>
+                  <label><input type="checkbox" name="option[]" value="3" />  Ham</label><br>
+                  <label><input type="checkbox" name="option[]" value="4" />  Sausage</label><br>
+                  <label><input type="checkbox" name="option[]" value="5" />  Pepperoni</label><br>
+                  <label><input type="checkbox" name="option[]" value="6" />  Chicken</label><br>
+                  <label><input type="checkbox" name="option[]" value="7" />  Ground Beef </label><br>
+                </div>
+           </div><br>
+           <div class="col-sm-6" id="veggies">
+             <label>Please select your veggies toppings below</label><br><br>
+               <div class="multiselect">
+                  <label><input type="checkbox" name="option[]" value="1" />  Pineapple</label><br>
+                  <label><input type="checkbox" name="option[]" value="2" />  Jalapenos</label><br>
+                  <label><input type="checkbox" name="option[]" value="3" />  Oignon</label><br>
+                  <label><input type="checkbox" name="option[]" value="4" />  Green Pepper</label><br>
+                  <label><input type="checkbox" name="option[]" value="5" />  Spinach</label><br>
+                  <label><input type="checkbox" name="option[]" value="6" />  Mushroom</label><br>
+                  <label><input type="checkbox" name="option[]" value="7" />  Olives</label><br>
+                  <label><input type="checkbox" name="option[]" value="5" />  Banana pepper</label><br>
+                  <label><input type="checkbox" name="option[]" value="6" />  Mushroom</label><br>
+                  <label><input type="checkbox" name="option[]" value="7" />  Olives</label><br>
+                </div>
+           </div><br>
+
+        <button type="submit" class="btn-primary">Place your order</button>
+
+      </form>
+
+      <div class="receipt">
+        <h2>Pizza Order Receipt</h2><br>
+        <div id="output">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
