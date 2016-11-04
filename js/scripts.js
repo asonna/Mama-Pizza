@@ -1,5 +1,5 @@
 // Business logic
-function Pizza(size,meatToppings, veggieToppings) {
+function Pizza(size, meatToppings, veggieToppings) {
   this.size = size;
   this.meatToppings = meatToppings;
   this.veggieToppings = veggieToppings;
@@ -49,7 +49,7 @@ $(document).ready(function() {
       return newAllVeggieToppings;
     });
 
-    var newPizza = new Pizza(checkedSize, checkedMeatToppings, checkedVeggieToppings);
+    var newPizza = new Pizza(checkedSize, checkedMeat, checkedVeggie);
 
     meatToppingsCost = newPizza.calculateMeatToppingsCost();
     veggieToppingsCost = newPizza.calculateVeggieToppingsCost();
@@ -58,7 +58,7 @@ $(document).ready(function() {
 
     $("#orderSum").show();
     $("#pizzaOrder").hide();
-    $("#output ul").append("<li>" + newAllMeatToppings + "</li>" + "<li>" + newAllVeggieToppings + "</li>")+ "<li>" + meatToppingsCost + "</li>"+ "<li>" + veggieToppingsCost + "</li>"+ "<li>" + checkedSize + "</li>";
+    $("#output ul").append("<li>" + newAllMeatToppings + "</li>" + "<li>" + newAllVeggieToppings + "</li>" + "<li>" + meatToppingsCost + "</li>"+ "<li>" + veggieToppingsCost + "</li>"+ "<li>" + checkedSize + "</li>");
 
   });
 });

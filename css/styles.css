@@ -1,11 +1,13 @@
 body {
-  background-color: black;
-  color: white;
+  background-color: ;
+  color: maroon;
   font-size: 20PX;
+  font-family: monospace;
 }
 
 h3 {
-  color: maroon;
+  color:blue;
+  font-weight: bold;
 }
 
 h2 {
@@ -13,8 +15,8 @@ h2 {
 }
 
 .jumbotron {
-  background-color: yellow;
-  color: black;
+  background-color: maroon;
+  color: white;
   text-align: center;
 }
 
