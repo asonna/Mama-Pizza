@@ -1,25 +1,29 @@
 // Business logic
-function Pizza(size, meatToppings, veggieToppings) {
+function Pizza(size, meatToppings, veggieToppings, allMeatToppings, allVeggieToppings) {
   this.size = size;
   this.meatToppings = meatToppings;
   this.veggieToppings = veggieToppings;
   this.allMeatToppings = [];
   this.allVeggieToppings = [];
+  this.allMeatCost = 0;
+  this.allVeggieCost = 0;
 }
 
 Pizza.prototype.calculateMeatToppingsCost = function() {
-  var allMeatCost = 0;
+  alert("toto4");
+  alert((this.allMeatToppings).length);
   for(i=0; i < this.allMeatToppings.length; i++) {
-    meatCost += parseInt(this.meatToppings);
-  }
+    alert("toto6");
+    alert(this.meatToppings.val());
+    alert(this.meatToppings);
 
+    this.allMeatCost += parseInt(this.meatToppings.val());
+  }
 }
 
 Pizza.prototype.calculateVeggieToppingsCost = function() {
-  var eachVeggieCost = 0;
-
   for(i=0; i < this.allVeggieToppings.length; i++) {
-    veggieCost += parseInt(this.veggieToppings);
+    this.allVeggieCost += parseInt(this.veggieToppings);
   }
 }
 
@@ -32,26 +36,28 @@ Pizza.prototype.calculateVeggieToppingsCost = function() {
 $(document).ready(function() {
   $(".btn-primary").click(function(event) {
     event.preventDefault();
+    alert("toto1")
+
+    var newPizza = new Pizza(checkedSize, checkedMeat, checkedVeggie, newAllMeatToppings, newAllVeggieToppings);
 
     var checkedSize = $('input:radio[name=size]:checked').val();
-    var checkedMeat = $('input:radio[name=meat]:checked').val();
-    var checkedVeggie = $('input:radio[name=veggie]:checked').val();
+    var checkedMeat = $('input:checkbox[name=meat]:checked').val();
+    var checkedVeggie = $('input:checkbox[name=veggie]:checked').val();
     var newAllMeatToppings = [];
     var newAllVeggieToppings = [];
+    var meatToppingsCost =0;
+    var veggieToppingsCost = 0;
 
     $.each($("input[name='meat']:checked"), function(){
       newAllMeatToppings.push($(this).val());
-      return newAllMeatToppings;
     });
 
     $.each($("input[name='veggie']:checked"), function(){
       newAllVeggieToppings.push($(this).val());
-      return newAllVeggieToppings;
     });
 
-    var newPizza = new Pizza(checkedSize, checkedMeat, checkedVeggie);
-
     meatToppingsCost = newPizza.calculateMeatToppingsCost();
+    alert("toto5")
     veggieToppingsCost = newPizza.calculateVeggieToppingsCost();
     // pizzaTotalCost = newPizza.addTotalCost();
 
