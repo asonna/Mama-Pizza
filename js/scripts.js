@@ -10,23 +10,26 @@ function Pizza(size) {
 
 Pizza.prototype.calculateMeatToppingsCost = function() {
   for(i=0; i < this.allMeatToppings.length; i++) {
+    alert(this.allMeatToppings[i]);
     this.allMeatCost += parseInt(this.allMeatToppings[i]);
   }
   alert("toto6");
   alert(this.allMeatCost);
+  alert(this.allMeatToppings.length);
+  return this.allMeatCost;
 }
 
 Pizza.prototype.calculateVeggieToppingsCost = function() {
   for(i=0; i < this.allVeggieToppings.length; i++) {
-    this.allVeggieCost += parseInt(this.allVeggieTopping[i]);
+    this.allVeggieCost += parseInt(this.allVeggieToppings[i]);
   }
+  return this.allVeggieCost;
 }
 
 Pizza.prototype.addTotalCost = function() {
-  totalCost = parseInt(this.size) + this.allMeatCost + this.allVeggieCost;
-  alert("totalCost = " + totalCost);
+  this.totalCost = parseInt(this.size) + this.allMeatCost + this.allVeggieCost;
+  alert("totalCost = " + this.totalCost);
 }
-
 
 // User interface
 $(document).ready(function() {
@@ -37,6 +40,7 @@ $(document).ready(function() {
     var checkedSize = $('input:radio[name=size]:checked').val();
     var meatToppingsCost =0;
     var veggieToppingsCost = 0;
+    var pizzaTotalCost = 0;
 
     var newPizza = new Pizza(checkedSize);
 
@@ -58,6 +62,9 @@ $(document).ready(function() {
 
     $("#orderSum").show();
     $("#pizzaOrder").hide();
-    $("#output ul").append("<li><strong>" +"Your pizza cost is: $" + pizzaTotalCost + "</strong></li>" + "<li>" + "This includes a base size costing: $" + checkedSize + "</li>" + "<li>" + newPizza.allMeatToppings.length + " meat toppings costing $" + meatToppingsCost + "</li>" + "<li>" +"And " + newPizza.allVeggieToppings.length + " veggie toppings costing $" + veggieToppingsCost + "</li>");
+    $("#output ul").append("<li>" +"Your pizza cost is: $" + pizzaTotalCost + "</li>" +
+    "<li>" + "This includes a base size costing: $" + checkedSize + "</li>" +
+    "<li>" + newPizza.allMeatToppings.length + " meat toppings costing $" + meatToppingsCost + "</li>" +
+    "<li>" +"And " + newPizza.allVeggieToppings.length + " veggie toppings costing $" + veggieToppingsCost + "</li>");
   });
 });

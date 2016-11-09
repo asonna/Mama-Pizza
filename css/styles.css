@@ -1,17 +1,19 @@
 body {
-  background-image: url(../img/pizza1.jpg);
+  /*background-image: url(../img/pizza1.jpg);*/
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: lightgreen;
   /*color: maroon;*/
-  font-size: 20PX;
+  font-size: 20px;
   font-family: monospace;
   font-weight: bold;
 }
 
 h3 {
-  color:maroon;
+  color:darkgreen;
   font-weight: bold;
-  text-align: center;
+  text-shadow: 1px 1px 1px #000, 3px 3px 5px green;
+  /*text-align: center;*/
   paddding left: 20px;
 }
 
@@ -37,22 +39,11 @@ img {
 
 #orderSum {
   display: none;
-  border: 1px solid gray;
-  border-radius: 10px;
-  margin: auto;
-  background-color: white;
 }
 
-#size {
+#size, #toppings, #orderSum {
   border: 1px solid gray;
   border-radius: 10px;
-  margin: auto;
-  background-color: white;
-}
-
-#toppings {
-  border: 1px solid gray;
-  border-radius: 10px;
-  margin: auto;
+  margin: 30px;
   background-color: white;
 }
