@@ -22,10 +22,9 @@ output: 2 and 1 repectively_
   input: spinach, Onion and Green Pepper
   output: 1,1,1_
 * _4th spec: create user interface equation to execute above two prototypes
-
 * _5th spec: create prototype for the total cost of one pizza
-input:
-output:_
+input: size(large)=7; allMeatCost(bacon, ham) = 4; allVeggieCost(Spinach) =1;
+output:_pizzaTotalCost = 7+4+1 = 12
 * _create user interface equation to execute the total cost of one pizza_
 
 
