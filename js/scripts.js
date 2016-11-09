@@ -1,8 +1,6 @@
 // Business logic
-function Pizza(size, meatToppings, veggieToppings) {
+function Pizza(size) {
   this.size = size;
-  this.meatToppings = meatToppings;
-  this.veggieToppings = veggieToppings;
   this.allMeatToppings = [];
   this.allVeggieToppings = [];
   this.allMeatCost = 0;
@@ -13,8 +11,9 @@ function Pizza(size, meatToppings, veggieToppings) {
 Pizza.prototype.calculateMeatToppingsCost = function() {
   for(i=0; i < this.allMeatToppings.length; i++) {
     this.allMeatCost += parseInt(this.allMeatToppings[i]);
-    alert("toto6");
   }
+  alert("toto6");
+  alert(this.allMeatCost);
 }
 
 Pizza.prototype.calculateVeggieToppingsCost = function() {
@@ -36,15 +35,12 @@ $(document).ready(function() {
     alert("toto1");
 
     var checkedSize = $('input:radio[name=size]:checked').val();
-    var checkedMeat = $('input:checkbox[name=meat]:checked').val();
-    var checkedVeggie = $('input:checkbox[name=veggie]:checked').val();
     var meatToppingsCost =0;
     var veggieToppingsCost = 0;
 
-    var newPizza = new Pizza(checkedSize, checkedMeat, checkedVeggie);
+    var newPizza = new Pizza(checkedSize);
 
     $.each($("input[name='meat']:checked"), function(){
-      alert("a");
       newPizza.allMeatToppings.push($(this).val());
     });
 
@@ -52,16 +48,16 @@ $(document).ready(function() {
       newPizza.allVeggieToppings.push($(this).val());
     });
 
-    meatToppingsCost = newPizza.allMeatCost;
+    meatToppingsCost = newPizza.calculateMeatToppingsCost();
     alert("toto5")
-    veggieToppingsCost = newPizza.allVeggieCost;
+    alert(meatToppingsCost);
+    veggieToppingsCost = newPizza.calculateVeggieToppingsCost();
     alert(veggieToppingsCost);
     pizzaTotalCost = newPizza.addTotalCost();
-    alert('fin');
 
 
     $("#orderSum").show();
     $("#pizzaOrder").hide();
-    $("#output ul").append("<li>" +"Your pizza cost is: $" + totalCost + "</li>" + "<li>" + "Your meat toppings cost $" + meatToppingsCost + "</li>" + "<li>" +"Your veggie toppings cost $" + veggieToppingsCost + "</li>" + "<li>" + newPizza.allMeatToppings + "</li>" + "<li>" + newPizza.allVeggieToppings + "</li>" + "<li>" + checkedSize + "</li>");
+    $("#output ul").append("<li><strong>" +"Your pizza cost is: $" + pizzaTotalCost + "</strong></li>" + "<li>" + "This includes a base size costing: $" + checkedSize + "</li>" + "<li>" + newPizza.allMeatToppings.length + " meat toppings costing $" + meatToppingsCost + "</li>" + "<li>" +"And " + newPizza.allVeggieToppings.length + " veggie toppings costing $" + veggieToppingsCost + "</li>");
   });
 });
