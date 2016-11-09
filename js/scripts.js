@@ -10,12 +10,8 @@ function Pizza(size) {
 
 Pizza.prototype.calculateMeatToppingsCost = function() {
   for(i=0; i < this.allMeatToppings.length; i++) {
-    alert(this.allMeatToppings[i]);
     this.allMeatCost += parseInt(this.allMeatToppings[i]);
   }
-  alert("toto6");
-  alert(this.allMeatCost);
-  alert(this.allMeatToppings.length);
   return this.allMeatCost;
 }
 
@@ -28,14 +24,13 @@ Pizza.prototype.calculateVeggieToppingsCost = function() {
 
 Pizza.prototype.addTotalCost = function() {
   this.totalCost = parseInt(this.size) + this.allMeatCost + this.allVeggieCost;
-  alert("totalCost = " + this.totalCost);
+  return this.totalCost;
 }
 
 // User interface
 $(document).ready(function() {
   $(".btn-primary").click(function(event) {
     event.preventDefault();
-    alert("toto1");
 
     var checkedSize = $('input:radio[name=size]:checked').val();
     var meatToppingsCost =0;
@@ -53,10 +48,7 @@ $(document).ready(function() {
     });
 
     meatToppingsCost = newPizza.calculateMeatToppingsCost();
-    alert("toto5")
-    alert(meatToppingsCost);
     veggieToppingsCost = newPizza.calculateVeggieToppingsCost();
-    alert(veggieToppingsCost);
     pizzaTotalCost = newPizza.addTotalCost();
 
 
